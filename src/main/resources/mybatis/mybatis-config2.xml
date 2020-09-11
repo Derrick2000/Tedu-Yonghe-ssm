@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration >
+	<!-- 0.导入jdbc.properties文件 -->
+	<properties resource="jdbc.properties" />
+	
+	<!-- 1.配置开发环境 -->
+	<environments default="develop">
+		<environment id="develop">
+			<!-- 1.1.配置事务管理方式(JDBC | MANAGED) -->
+			<transactionManager type="JDBC" />
+			
+			<!-- 1.2.配置连接数据库的基本信息(连接池)
+				type: POOLED/UNPOOLED/JNDI
+			 -->
+			<dataSource type="POOLED">
+				<property name="driver" value="${jdbc.driver}"/>
+				<property name="url" value="${jdbc.url}"/>
+				<property name="username" value="${jdbc.username}"/>
+				<property name="password" value="${jdbc.password}"/>
+			</dataSource>
+			
+		</environment>
+	</environments>
+	
+	<!-- 2.引入XxxMapper.xml文件 -->
+	<mappers>
+		<!-- resource应指定配置文件在类目录的哪一个位置 -->
+		<mapper resource="mybatis/mapper/DoorMapper.xml"/>
+	</mappers>
+</configuration>
+
+
+
+

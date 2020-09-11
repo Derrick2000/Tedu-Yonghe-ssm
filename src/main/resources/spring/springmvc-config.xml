@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc
+						http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+						http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+						http://www.springframework.org/schema/context
+          				http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+	<!-- 1.放行静态资源(不让springmvc前端控制器拦截html/css/js/图片等静态资源) -->
+	<mvc:default-servlet-handler/>
+	
+	
+	<!-- 2.配置识别注解驱动(为了能够识别程序中的注解, 例如: @Controller @Service) -->
+	<mvc:annotation-driven></mvc:annotation-driven>
+	
+	<!-- 3.配置包扫描(扫描controller包下的所有类,将该包下的所有类的对象的创建
+		交给spring容器负责) -->
+	<context:component-scan 
+		base-package="com.tedu.controller"></context:component-scan>
+	
+	<!-- 4.配置内部资源视图解析器
+		由spring负责创建 内部资源视图解析器 对象
+		并且为对象的属性赋值
+		跳转到 /WEB-INF/pages/home.jsp
+	 -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/pages/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+	
+	
+	
+	
+</beans>
