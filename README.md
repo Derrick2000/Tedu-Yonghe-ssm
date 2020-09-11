@@ -1,6 +1,8 @@
 # Tedu
 Name: Mingyu(Derrick) Li
+
 Instructor: Shenzhen Zhang
+
 Project Name: Yonghe Store Management System
 
 Description: 
