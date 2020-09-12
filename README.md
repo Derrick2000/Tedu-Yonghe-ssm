@@ -9,4 +9,8 @@ Description:
 This is a basic web project that utilizes ssm framework. It includes two seperate models: a Order-list and a Store-list that keep 
 track of the orders among stores. The main function is its ability to add/delete/update/search from the database.
 
-To run the project on a browser, first run "data.sql", start tomcat server, then add "index.html" at the end of the url.
+To run the project on a browser, 
+1. Run "data.sql", 
+2. If mysql port isn't 3307 on your computer, make adjustments in the file called "jdbc.properties".
+3. Start tomcat server,
+4. Add "index.html" at the end of the url.
