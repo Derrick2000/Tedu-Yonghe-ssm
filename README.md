@@ -11,6 +11,6 @@ track of the orders among stores. The main function is its ability to add/delete
 
 To run the project on a browser, 
 1. Run "data.sql", 
-2. If mysql port isn't 3307 on your computer, make adjustments in the file called "jdbc.properties".
+2. Make adjustments in "jdbc.properties".
 3. Start tomcat server,
 4. Add "index.html" at the end of the url.
