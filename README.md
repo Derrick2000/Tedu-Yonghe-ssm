@@ -4,7 +4,7 @@ Instructor: Shenzheng Zhang
 
 Project Name: Yonghe Store Management System
 
-Environment: jdk1.8 + tomcat8.5 + MySql + SSM + JSP + html + css
+Environment: jdk1.8 + tomcat8.5 + MySql + SSM 
 
 Description: 
 This is a basic web project that utilizes ssm framework. It includes two seperate models: a Order-list and a Store-list that keep 
