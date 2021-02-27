@@ -1,7 +1,5 @@
 Name: Mingyu(Derrick) Li
 
-Instructor: Shenzheng Zhang
-
 Project Name: Yonghe Store Management System
 
 Environment: jdk1.8 + tomcat8.5 + MySql + SSM 
